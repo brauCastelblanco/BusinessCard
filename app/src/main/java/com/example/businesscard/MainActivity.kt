@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -58,11 +59,15 @@ fun BusinessCard( modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
+            Box(
+                Modifier.size(150.dp)
+                    .background(Color(0xFF0A2E48))
+            ){
             Image(
                 painter = profileImage,
                 contentDescription = null,
 
-                )
+                )}
             Text(
                 text = fullName,
                 fontSize = 25.sp,
